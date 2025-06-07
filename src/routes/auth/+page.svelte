@@ -1,16 +1,5 @@
 <script lang="ts">
-	import { dictionary } from './../../../.svelte-kit/generated/client-optimized/app.js';
-	import type { PageProps } from './$types';
-	import { enhance } from '$app/forms';
-	import { Button } from '$lib/components/ui/button';
-	import { Badge } from '$lib/components/ui/badge';
-	import { Separator } from '$lib/components/ui/separator';
 	import MainNav from '$lib/components/navigation/MainNav.svelte';
-	import { ArrowRight, ArrowUpRight, BookOpen } from '@lucide/svelte';
-
-	let { data }: PageProps = $props();
-
-	let message = $state('');
 </script>
 
 <MainNav />
