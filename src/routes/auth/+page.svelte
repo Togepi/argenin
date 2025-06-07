@@ -1,0 +1,91 @@
+<script lang="ts">
+	import { dictionary } from './../../../.svelte-kit/generated/client-optimized/app.js';
+	import type { PageProps } from './$types';
+	import { enhance } from '$app/forms';
+	import { Button } from '$lib/components/ui/button';
+	import { Badge } from '$lib/components/ui/badge';
+	import { Separator } from '$lib/components/ui/separator';
+	import MainNav from '$lib/components/navigation/MainNav.svelte';
+	import { ArrowRight, ArrowUpRight, BookOpen } from '@lucide/svelte';
+
+	let { data }: PageProps = $props();
+
+	let message = $state('');
+</script>
+
+<MainNav />
+
+<section
+	style="background-image: url('/img/identification_bg.webp')"
+	class="flex h-dvh w-dvw items-center justify-center bg-cover bg-center px-12 xl:px-0"
+>
+	¨
+	<div class="grid max-w-7xl gap-10 md:grid-cols-2">
+		<article class=" space-y-8 rounded-lg bg-neutral-950 p-12 text-white">
+			<h3 class=" text-4xl">Inscription</h3>
+			<h4 class="font-bold">Je n'ai pas encore de compte :</h4>
+			<p>
+				Pour vous inscrire, la priorité est de vous connecter au discord. Toute la communication
+				passera sur le serveur discord.
+			</p>
+
+			<a
+				class="flex items-center justify-between rounded-lg border bg-neutral-900 p-2 px-5 hover:bg-neutral-800"
+				href="/"
+				><span>Se rendre sur le discord </span>
+				<svg
+					width="32px"
+					height="32px"
+					viewBox="0 -28.5 256 256"
+					version="1.1"
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					preserveAspectRatio="xMidYMid"
+					fill="#ffffff"
+					fill-opacity="1"
+					fill-rule="nonzero"
+					class="cursor-pointer transition-transform duration-200 hover:scale-110"
+				>
+					<g>
+						<path
+							d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
+						>
+						</path>
+					</g>
+				</svg>
+			</a>
+			<p>
+				Une fois connectée au discord, vous pourrez revenir sur le site pour vosu connecter avec
+				votre compte discord.
+			</p>
+		</article>
+
+		<div
+			class="relative flex h-full cursor-not-allowed flex-col items-center justify-center overflow-hidden rounded-lg bg-neutral-950 p-2 px-5 hover:bg-neutral-900"
+		>
+			<div class="absolute inset-0 z-30 flex bg-white/90">
+				<div class="m-auto text-center text-3xl">Inscription Bientot disponible</div>
+			</div>
+			<svg
+				viewBox="0 -28.5 256 256"
+				version="1.1"
+				xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink"
+				preserveAspectRatio="xMidYMid"
+				fill="#ffffff"
+				fill-opacity="1"
+				fill-rule="nonzero"
+				class="relative z-20 h-1/4 w-1/4 cursor-pointer transition-transform duration-200"
+			>
+				<g>
+					<path
+						d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z"
+					>
+					</path>
+				</g>
+			</svg><span class="font-title max-w-xs text-center text-4xl text-white"
+				>Se connecter avec son compte discord</span
+			>
+		</div>
+	</div>
+</section>
